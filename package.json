@@ -1,0 +1,22 @@
+{
+  "name": "scouting2018",
+  "version": "2.0.0",
+  "description": "The scouting app used for 2018 Powerup, modified to run as a website, not a webapp.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skunkworks1983/scouting2018.git"
+  },
+  "author": "Skunkworks Scouting Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skunkworks1983/scouting2018/issues"
+  },
+  "homepage": "https://github.com/Skunkworks1983/scouting2018#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

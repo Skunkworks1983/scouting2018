@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const pg = require("pg");
+const path = require("path");
 const app = express();
 const port = 3000;
 
@@ -22,6 +22,13 @@ app.use(function (req, res, next) {
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     next();
+});
+
+app.use(express.static('client'));
+
+app.get('/', function(req, res) {
+    console.log(req.body);
+    res.sendFile(path.join(__dirname + '/client/mainPage.html'));
 });
 
 app.post('/', function(req, res) {
