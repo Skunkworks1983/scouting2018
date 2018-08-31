@@ -4,10 +4,10 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-// const conString = "pg://postgres:password@localhost:5432/skunk2018";
-//
-// var client = new pg.Client(conString);
-// client.connect();
+const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
+
+var client = new pg.Client(conString);
+client.connect();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -35,7 +35,7 @@ app.post('/', function(req, res) {
     console.log(req.body);
 
     //TODO: Match # of $x subs with the # of columns in the DB
-    /*try {
+    try {
         var query = client.query("INSERT INTO matches VALUES ($1, $2, $3, $4, $5)", getJsonValues(req.body));
     } catch (err) {
         console.log("Something went very wrong, Patrick must have coded this part");
@@ -44,7 +44,7 @@ app.post('/', function(req, res) {
 
     query.on("end", function (result) {
         console.log("Added DB row");
-    });*/
+    });
     var IT_WORKED = true;
     var ERR = "Incompetence is Patrick's best character trait";
 
