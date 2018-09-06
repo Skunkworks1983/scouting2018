@@ -28,22 +28,24 @@ app.use(function (req, res, next) {
 app.use(express.static('client'));
 
 app.get('/', function(req, res) {
-    console.log(req.body);
+    //console.log(req.body);
     res.sendFile(path.join(__dirname + '/client/mainPage.html'));
 });
 
 app.post('/', function(req, res) {
-    console.log(req.body);
-
+    console.log(getJsonValues(req.body));
     //TODO: Match # of $x subs with the # of columns in the DB
+    let query;
     try {
-        var query = client.query("INSERT INTO matches VALUES ($1, $2, $3, $4, $5)", getJsonValues(req.body));
+        query = client.query("INSERT INTO matches VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)", getJsonValues(req.body));
     } catch (err) {
         console.log("Something went very wrong, Patrick must have coded this part");
         console.log(err);
     }
+    console.log(query);
 
-    query.on("end", function (result) {
+    query.then("end", function (result) {
+        console.log(result);
         console.log("Added DB row");
     });
     var IT_WORKED = true;
@@ -67,9 +69,10 @@ app.listen(port, function(err) {
 function getJsonValues(arr) { //We call this arr because Eli's a dingleberry
     retArr = [];
     for(var key in arr) {
-        if(arr.hasOwnProperty(key)) {
-            retArr.push(arr.key);
-        }
+        retArr.push(arr[key]);
+        // if(arr.hasOwnProperty(key)) {
+        //     retArr.push(arr.key);
+        // }
     }
 
     return retArr;

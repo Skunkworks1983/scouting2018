@@ -1,6 +1,6 @@
 var matchData;
 var matchesEvent;
-var path = "http://ubuntu@ec2-52-35-34-216.us-west-2.compute.amazonaws.com:3000"; //TODO: Put in AWS info
+var path = "http://localhost:3000"; //TODO: Put in AWS info
 
 window.addEventListener('load', function() {
     table = document.getElementById("matchData");

@@ -1,0 +1,1 @@
+create table matches (isTele text, scoutName text, eventName text, teamNo text, match text, alliance text, autoStartPos text, autoCrossline text, autoScale text, autoSwitch text, noShow text, teleScale text, teleSwitch text, teleExchange text, deadBot text, Climb text, AssistedClimb text, RecievedClimb text, Park text, autoDroppedCubes text, teleDroppedCubes text)
