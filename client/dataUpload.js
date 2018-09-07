@@ -1,6 +1,6 @@
 var matchData;
 var matchesEvent;
-var path = "http://localhost:3000"; //TODO: Put in AWS info
+var path = "http://whostinks.org"; //TODO: Put in AWS info
 
 window.addEventListener('load', function() {
     table = document.getElementById("matchData");
