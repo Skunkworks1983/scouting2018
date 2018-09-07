@@ -1,9 +1,11 @@
+#!/usr/bin/env nodejs
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const pg = require("pg");
 const app = express();
-const port = 3000;
+const port = 8080;
 
 const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
 
