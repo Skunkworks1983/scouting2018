@@ -8,7 +8,7 @@ const app = express();
 const port = 8080;
 
 const matches =
-    {comp_level:'qm', alliances:{red:{teams:['0000','0000','0000']},blue:{teams:['0000','0000','0000']}}};
+    [{comp_level:'qm', alliances:{red:{teams:['0000','0000','0000']},blue:{teams:['0000','0000','0000']}}}];
 
 const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
 

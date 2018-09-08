@@ -36,7 +36,7 @@ function initialize() {
     jObj = JSON.parse(jStr);
 	var str = window.location.search;
  	matchTablet(str);
-	eventList = ["2016wagg","2018week0","2018waahs","2018wasno","2018idbo","2018pncmp", "2018wamou"];
+	eventList = ["2018wapp","2016wagg","2018week0","2018waahs","2018wasno","2018idbo","2018pncmp", "2018wamou"];
 	if (localStorage.length !== 0) {
 	loop1:
 	    for (var j=0; j<eventList.length; j++) {
