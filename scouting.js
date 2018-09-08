@@ -14,7 +14,11 @@ const matches =
         {comp_level:'qm', match_number:'4', alliances:{blue:{teams:['6343','6350','2811']},red:{teams:['4469','3663','2976']}}},
         {comp_level:'qm', match_number:'5', alliances:{blue:{teams:['2928','948','5588']},red:{teams:['3145','2522','4131']}}},
         {comp_level:'qm', match_number:'6', alliances:{blue:{teams:['2046','3663','6343']},red:{teams:['9994','2733','360']}}},
-        {comp_level:'qm', match_number:'7', alliances:{blue:{teams:['2522','2557','2928']},red:{teams:['4450','2910','2976']}}},];
+        {comp_level:'qm', match_number:'7', alliances:{blue:{teams:['2522','2557','2928']},red:{teams:['4450','2910','2976']}}},
+        {comp_level:'qm', match_number:'8', alliances:{blue:{teams:['2930','4180','4469']},red:{teams:['3145','1983','1778']}}},
+        {comp_level:'qm', match_number:'9', alliances:{blue:{teams:['6350','4692','4911']},red:{teams:['5588','5803','5827']}}},
+        {comp_level:'qm', match_number:'10', alliances:{blue:{teams:['2811','4131','1778']},red:{teams:['1318','9994','2910']}}},
+        {comp_level:'qm', match_number:'11', alliances:{blue:{teams:['6350','4469','2046']},red:{teams:['4911','2522','4450']}}},];
 
 const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
 
