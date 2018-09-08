@@ -8,7 +8,10 @@ const app = express();
 const port = 8080;
 
 const matches =
-    [{comp_level:'qm', alliances:{red:{teams:['0000','0000','0000']},blue:{teams:['0000','0000','0000']}}}];
+    [{comp_level:'qm', match_number:'1', alliances:{blue:{teams:['1778','5827','2557']},red:{teams:['4131','2046','1983']}}},
+        {comp_level:'qm', match_number:'2', alliances:{blue:{teams:['9994','5827','2557']},red:{teams:['4131','2046','1983']}}},
+        {comp_level:'qm', match_number:'3', alliances:{blue:{teams:['1778','5827','2557']},red:{teams:['4131','2046','1983']}}},
+        {comp_level:'qm', match_number:'4', alliances:{blue:{teams:['6343','6350','2811']},red:{teams:['4469','3663','2976']}}},];
 
 const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
 
