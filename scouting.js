@@ -7,6 +7,9 @@ const pg = require("pg");
 const app = express();
 const port = 8080;
 
+const matches =
+    {comp_level:'qm', alliances:{red:{teams:['0000','0000','0000']},blue:{teams:['0000','0000','0000']}}};
+
 const conString = "pg://skunkadmin:scouterspowerlevelis1983@scoutingdata.ck2iryvzyhsg.us-east-1.rds.amazonaws.com:5432/scoutingdata";
 
 var client = new pg.Client(conString);
@@ -32,6 +35,10 @@ app.use(express.static('client'));
 app.get('/', function(req, res) {
     //console.log(req.body);
     res.sendFile(path.join(__dirname + '/client/mainPage.html'));
+});
+
+app.get('/matches', function(req, res) {
+    res.send(JSON.stringify(matches));
 });
 
 app.post('/', function(req, res) {
