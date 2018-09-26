@@ -45,8 +45,9 @@ function download() {
         chrs = BlueAllianceURL.concat(eventName);
         chrs = chrs.concat("/matches");
     ////console.log(chrs.concat(xbtAPP_ID));                            // Test
-        issueRequestHTTP("GET", "http://whostinks.org/matches", function(result)
+        issueRequestHTTP("GET", "http://localhost:8080/matches", function(result)
         {
+            console.log(result);
             matchesHaveBeenDownloaded(result);
         });
     }
